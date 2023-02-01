@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Ethan Hazelton"/>
+		<title>MDT TDCV2 Monitoring</title>
+		<script src="../../../JsRoot611/scripts/JSRoot.core.min.js" type="text/javascript"></script>
+		<meta http-equiv="refresh" content="30">
+		<link rel="stylesheet" href="../../CSS/style.css"/>
+	</head>
+	<body>
+		<div class = "header">
+			<h1>MDT TDCV2 Monitoring</h1>
+		</div>
+		<ul>
+			<li><a href = "../home.html">Home</a></li>
+			<li><a href="../events.html">Events</a></li>
+			<li><a href="../Global.html">Global</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropbtn">TDC</a>
+				<div class="dropdown-content">
+					<div class = "column">
+						<a href="./TDC00_TDC.html">TDC 00</a>
+						<a href="./TDC06_TDC.html">TDC 06</a>
+						<a href="./TDC12_TDC.html">TDC 12</a>
+						<a href="./TDC18_TDC.html">TDC 18</a>
+						<a href="./TDC24_TDC.html">TDC 24</a>
+						<a href="./TDC30_TDC.html">TDC 30</a>
+					</div>
+					<div class = "column">
+						<a href= "./TDC01_TDC.html">TDC 01</a>
+						<a href="./TDC07_TDC.html">TDC 07</a>
+						<a href="./TDC13_TDC.html">TDC 13</a>
+						<a href="./TDC19_TDC.html">TDC 19</a>
+						<a href="./TDC25_TDC.html">TDC 25</a>
+						<a href="./TDC31_TDC.html">TDC 31</a>
+					</div>
+					<div class = "column">
+						<a href= "./TDC02_TDC.html">TDC 02</a>
+						<a href="./TDC08_TDC.html">TDC 08</a>
+						<a href= "./TDC14_TDC.html">TDC 14</a>
+						<a href= "./TDC20_TDC.html">TDC 20</a>
+						<a href="./TDC26_TDC.html">TDC 26</a>
+						<a href="./TDC32_TDC.html">TDC 32</a>
+					</div>
+					<div class = "column">
+						<a href="./TDC03_TDC.html">TDC 03</a>
+						<a href="./TDC09_TDC.html">TDC 09</a>
+						<a href="./TDC15_TDC.html">TDC 15</a>
+						<a href="./TDC21_TDC.html">TDC 21</a>
+						<a href="./TDC27_TDC.html">TDC 27</a>
+						<a href="./TDC33_TDC.html">TDC 33</a>
+					</div>
+					<div class = "column">
+						<a href= "./TDC04_TDC.html">TDC 04</a>
+						<a href= "./TDC10_TDC.html">TDC 10</a>
+						<a href= "./TDC16_TDC.html">TDC 16</a>
+						<a href= "./TDC22_TDC.html">TDC 22</a>
+						<a href="./TDC28_TDC.html">TDC 28</a>
+						<a href="./TDC34_TDC.html">TDC 34</a>
+						</div>
+						<div class = "column">
+						<a href="./TDC05_TDC.html">TDC 05</a>
+						<a href="./TDC11_TDC.html">TDC 11</a>
+						<a href="./TDC17_TDC.html">TDC 17</a>
+						<a href="./TDC23_TDC.html">TDC 23</a>
+						<a href="./TDC29_TDC.html">TDC 29</a>
+						<a href="./TDC35_TDC.html">TDC 35</a>
+						</div>
+				</div>
+			</li>
+			<li><a href = "../channels_selection.html">Channel Selection</a></li>
+			<li><a href="../event_display_passing.html">Event Display</a></li>
+		</ul>
+		<h2>TDC 25</h2>
+
+		<div class = "buttonblock">
+			<ul>
+				<li><a class="TDCbutton" href="TDC25_TDC.html">TDC</a></li>
+				<li><a class="ADCbutton" href="TDC25_ADC.html">ADC</a></li>
+			</ul>
+		</div>
+		<table align="center" cellspacing="20">
+            <tr>
+                <td>
+                    <h4><b>TDC25: TDC Channel 0 Time Spectrum</b></h4>
+					<div id="t0"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_0_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t0", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_0_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t0", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 1 Time Spectrum</b></h4>
+					<div id="t1"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_1_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t1", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_1_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t1", obj, "colz");
+						  });
+					 </script>
+                </td>
+				<td>
+                    <h4><b>TDC25: TDC Channel 2 Time Spectrum</b></h4>
+					<div id="t2"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_2_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t2", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_2_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t2", obj, "colz");
+						  });
+					 </script>
+                </td>
+            </tr>
+            <tr>
+				<td>
+                    <h4><b>TDC25: TDC Channel 3 Time Spectrum</b></h4>
+					<div id="t3"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_3_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t3", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_3_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t3", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 4 Time Spectrum</b></h4>
+					<div id="t4"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_4_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t4", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_4_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t4", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 5 Time Spectrum</b></h4>
+					<div id="t5"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_5_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t5", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_5_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t5", obj, "colz");
+						  });
+					 </script>
+                </td>
+            </tr>
+            <tr>
+				<td>
+                    <h4><b>TDC25: TDC Channel 6 Time Spectrum</b></h4>
+					<div id="t6"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_6_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t6", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_6_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t6", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 7 Time Spectrum</b></h4>
+					<div id="t7"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_7_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t7", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_7_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t7", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 8 Time Spectrum</b></h4>
+					<div id="t8"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_8_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t8", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_8_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t8", obj, "colz");
+						  });
+					 </script>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4><b>TDC25: TDC Channel 9 Time Spectrum</b></h4>
+					<div id="t9"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_9_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t9", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_9_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t9", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 10 Time Spectrum</b></h4>
+					<div id="t10"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_10_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t10", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_10_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t10", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 11 Time Spectrum</b></h4>
+					<div id="t11"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_11_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t11", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_11_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t11", obj, "colz");
+						  });
+					 </script>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4><b>TDC25: TDC Channel 12 Time Spectrum</b></h4>
+					<div id="t12"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_12_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t12", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_12_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t12", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 13 Time Spectrum</b></h4>
+					<div id="t13"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_13_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t13", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_13_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t13", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 14 Time Spectrum</b></h4>
+					<div id="t14"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_14_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t14", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_14_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t14", obj, "colz");
+						  });
+					 </script>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4><b>TDC25: TDC Channel 15 Time Spectrum</b></h4>
+					<div id="t15"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_15_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t15", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_15_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t15", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 16 Time Spectrum</b></h4>
+					<div id="t16"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_16_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t16", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_16_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t16", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 17 Time Spectrum</b></h4>
+					<div id="t17"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_17_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t17", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_17_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t17", obj, "colz");
+						  });
+					 </script>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4><b>TDC25: TDC Channel 18 Time Spectrum</b></h4>
+					<div id="t18"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_18_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t18", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_18_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t18", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 19 Time Spectrum</b></h4>
+					<div id="t19"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_19_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t19", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_19_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t19", obj, "colz");
+						  });
+					 </script>
+                </td>
+				<td>
+                    <h4><b>TDC25: TDC Channel 20 Time Spectrum</b></h4>
+					<div id="t20"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_20_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t20", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_20_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t20", obj, "colz");
+						  });
+					 </script>
+                </td>
+            <tr>
+                <td>
+                    <h4><b>TDC25: TDC Channel 21 Time Spectrum</b></h4>
+					<div id="t21"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_21_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t21", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_21_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t21", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 22 Time Spectrum</b></h4>
+					<div id="t22"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_22_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t22", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_22_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t22", obj, "colz");
+						  });
+					 </script>
+                </td>
+                <td>
+                    <h4><b>TDC25: TDC Channel 23 Time Spectrum</b></h4>
+					<div id="t23"></div>
+					<script type='text/javascript'>
+						// absolute file path can be used as well
+						JSROOT.openFile("../../../data/%(rootFile)s")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_23_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.draw("t23", obj, "colz");
+						  });
+						JSROOT.openFile("../../../data/reference.root")
+						  .then(file => file.readObject("TDC_25_of_36_Time_Spectrum/tdc_25_channel_23_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.draw("t23", obj, "colz");
+						  });
+					 </script>
+                </td>
+            </tr>
+        </table>
+	</body>
+</html>

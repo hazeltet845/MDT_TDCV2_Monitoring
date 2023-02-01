@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Ethan Hazelton"/>
+		<title>MDT TDCV2 Monitoring</title>
+		<script src="../../JsRoot611/scripts/JSRoot.core.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="../CSS/style.css"/>
+	</head>
+	<body>
+		<div class = "header">
+			<h1>MDT TDCV2 Monitoring</h1>
+		</div>
+		<ul>
+			<li><a href = "./home.html">Home</a></li>
+			<li><a href="./events.html">Events</a></li>
+			<li><a href="./Global.html">Global</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropbtn">TDC</a>
+				<div class="dropdown-content">
+					<div class = "column">
+						<a href="./TDC/TDC00_TDC.html">TDC 00</a>
+						<a href="./TDC/TDC06_TDC.html">TDC 06</a>
+						<a href="./TDC/TDC12_TDC.html">TDC 12</a>
+						<a href="./TDC/TDC18_TDC.html">TDC 18</a>
+						<a href="./TDC/TDC24_TDC.html">TDC 24</a>
+						<a href="./TDC/TDC30_TDC.html">TDC 30</a>
+					</div>
+					<div class = "column">
+						<a href= "./TDC/TDC01_TDC.html">TDC 01</a>
+						<a href="./TDC/TDC07_TDC.html">TDC 07</a>
+						<a href="./TDC/TDC13_TDC.html">TDC 13</a>
+						<a href="./TDC/TDC19_TDC.html">TDC 19</a>
+						<a href="./TDC/TDC25_TDC.html">TDC 25</a>
+						<a href="./TDC/TDC31_TDC.html">TDC 31</a>
+					</div>
+					<div class = "column">
+						<a href= "./TDC/TDC02_TDC.html">TDC 02</a>
+						<a href="./TDC/TDC08_TDC.html">TDC 08</a>
+						<a href= "./TDC/TDC14_TDC.html">TDC 14</a>
+						<a href= "./TDC/TDC20_TDC.html">TDC 20</a>
+						<a href="./TDC/TDC26_TDC.html">TDC 26</a>
+						<a href="./TDC/TDC32_TDC.html">TDC 32</a>
+					</div>
+					<div class = "column">
+						<a href="./TDC/TDC03_TDC.html">TDC 03</a>
+						<a href="./TDC/TDC09_TDC.html">TDC 09</a>
+						<a href="./TDC/TDC15_TDC.html">TDC 15</a>
+						<a href="./TDC/TDC21_TDC.html">TDC 21</a>
+						<a href="./TDC/TDC27_TDC.html">TDC 27</a>
+						<a href="./TDC/TDC33_TDC.html">TDC 33</a>
+					</div>
+					<div class = "column">
+						<a href= "./TDC/TDC04_TDC.html">TDC 04</a>
+						<a href= "./TDC/TDC10_TDC.html">TDC 10</a>
+						<a href= "./TDC/TDC16_TDC.html">TDC 16</a>
+						<a href= "./TDC/TDC22_TDC.html">TDC 22</a>
+						<a href="./TDC/TDC28_TDC.html">TDC 28</a>
+						<a href="./TDC/TDC34_TDC.html">TDC 34</a>
+						</div>
+						<div class = "column">
+						<a href="./TDC/TDC05_TDC.html">TDC 05</a>
+						<a href="./TDC/TDC11_TDC.html">TDC 11</a>
+						<a href="./TDC/TDC17_TDC.html">TDC 17</a>
+						<a href="./TDC/TDC23_TDC.html">TDC 23</a>
+						<a href="./TDC/TDC29_TDC.html">TDC 29</a>
+						<a href="./TDC/TDC35_TDC.html">TDC 35</a>
+						</div>
+				</div>
+			</li>
+            <li><a href = "channels_selection.html">Channel Selection</a></li>
+			<li><a href="./event_display_passing.html">Event Display</a></li>
+		</ul>
+		<h2>Channel Selection</h2>
+		<br>
+		<div class = "menu">
+			<label><b>TDC #:</b></label>
+			<select id="TDCView">
+				<option value="TDC_00_of_36_Time_Spectrum/tdc_0">TDC00</option>
+				<option value="TDC_01_of_36_Time_Spectrum/tdc_1">TDC01</option>
+				<option value="TDC_02_of_36_Time_Spectrum/tdc_2">TDC02</option>
+				<option value="TDC_03_of_36_Time_Spectrum/tdc_3">TDC03</option>
+				<option value="TDC_04_of_36_Time_Spectrum/tdc_4">TDC04</option>
+				<option value="TDC_05_of_36_Time_Spectrum/tdc_5">TDC05</option>
+				<option value="TDC_06_of_36_Time_Spectrum/tdc_6">TDC06</option>
+				<option value="TDC_07_of_36_Time_Spectrum/tdc_7">TDC07</option>
+				<option value="TDC_08_of_36_Time_Spectrum/tdc_8">TDC08</option>
+				<option value="TDC_09_of_36_Time_Spectrum/tdc_9">TDC09</option>
+				<option value="TDC_10_of_36_Time_Spectrum/tdc_10">TDC10</option>
+				<option value="TDC_11_of_36_Time_Spectrum/tdc_11">TDC11</option>
+				<option value="TDC_12_of_36_Time_Spectrum/tdc_12">TDC12</option>
+				<option value="TDC_13_of_36_Time_Spectrum/tdc_13">TDC13</option>
+				<option value="TDC_14_of_36_Time_Spectrum/tdc_14">TDC14</option>
+				<option value="TDC_15_of_36_Time_Spectrum/tdc_15">TDC15</option>
+				<option value="TDC_16_of_36_Time_Spectrum/tdc_16">TDC16</option>
+				<option value="TDC_17_of_36_Time_Spectrum/tdc_17">TDC17</option>
+				<option value="TDC_18_of_36_Time_Spectrum/tdc_18">TDC18</option>
+				<option value="TDC_19_of_36_Time_Spectrum/tdc_19">TDC19</option>
+				<option value="TDC_20_of_36_Time_Spectrum/tdc_20">TDC20</option>
+				<option value="TDC_21_of_36_Time_Spectrum/tdc_21">TDC21</option>
+				<option value="TDC_22_of_36_Time_Spectrum/tdc_22">TDC22</option>
+				<option value="TDC_23_of_36_Time_Spectrum/tdc_23">TDC23</option>
+				<option value="TDC_24_of_36_Time_Spectrum/tdc_24">TDC24</option>
+				<option value="TDC_25_of_36_Time_Spectrum/tdc_25">TDC25</option>
+				<option value="TDC_26_of_36_Time_Spectrum/tdc_26">TDC26</option>
+				<option value="TDC_27_of_36_Time_Spectrum/tdc_27">TDC27</option>
+				<option value="TDC_28_of_36_Time_Spectrum/tdc_28">TDC28</option>
+				<option value="TDC_29_of_36_Time_Spectrum/tdc_29">TDC29</option>
+				<option value="TDC_30_of_36_Time_Spectrum/tdc_30">TDC30</option>
+				<option value="TDC_31_of_36_Time_Spectrum/tdc_31">TDC31</option>
+				<option value="TDC_32_of_36_Time_Spectrum/tdc_32">TDC32</option>
+				<option value="TDC_33_of_36_Time_Spectrum/tdc_33">TDC33</option>
+				<option value="TDC_34_of_36_Time_Spectrum/tdc_34">TDC34</option>
+				<option value="TDC_35_of_36_Time_Spectrum/tdc_35">TDC35</option>
+			</select>
+			<label><b>Channel #:</b></label>
+			<select id="ChannelView">
+				<option value="_channel_0" >Channel 0</option>
+				<option value="_channel_1" >Channel 1</option>
+				<option value="_channel_2">Channel 2</option>
+				<option value="_channel_3" >Channel 3</option>
+				<option value="_channel_4">Channel 4</option>
+				<option value="_channel_5" >Channel 5</option>
+				<option value="_channel_6">Channel 6</option>
+				<option value="_channel_7" >Channel 7</option>
+				<option value="_channel_8">Channel 8</option>
+				<option value="_channel_9" >Channel 9</option>
+				<option value="_channel_10">Channel 10</option>
+				<option value="_channel_11" >Channel 11</option>
+				<option value="_channel_12">Channel 12</option>
+				<option value="_channel_13" >Channel 13</option>
+				<option value="_channel_14">Channel 14</option>
+				<option value="_channel_15" >Channel 15</option>
+				<option value="_channel_16">Channel 16</option>
+				<option value="_channel_17" >Channel 17</option>
+				<option value="_channel_18">Channel 18</option>
+				<option value="_channel_19" >Channel 19</option>
+				<option value="_channel_20">Channel 20</option>
+				<option value="_channel_21" >Channel 21</option>
+				<option value="_channel_22">Channel 22</option>
+				<option value="_channel_23" >Channel 23</option>
+				<option value="_channel_24">Channel 24</option>
+			</select>
+			<button id = "applyButton" onclick="graphs()">Apply</button>
+		</div>
+		<script type = 'text/javascript'>
+
+			function graphs(){
+				var TDC_s = document.getElementById("TDCView");
+				var strUser0 = TDC_s.value;
+
+				var  Channel_s = document.getElementById("ChannelView");
+				var strUser1 = Channel_s.value;
+
+				JSROOT.openFile("../../data/%(rootFile)s")
+						  .then(file => file.readObject(strUser0 + strUser1 + "_adc_time_spectrum"))
+						  .then(obj => {
+		
+							  JSROOT.redraw("d0", obj, "colz");
+						  });
+				JSROOT.openFile("../../data/reference.root")
+						  .then(file => file.readObject(strUser0 + strUser1 + "_adc_time_spectrum"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.redraw("d0", obj, "colz");
+						  });
+
+				JSROOT.openFile("../../data/%(rootFile)s")
+						  .then(file => file.readObject(strUser0 + strUser1 + "_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  
+							  JSROOT.redraw("d1", obj, "colz");
+						  });
+				JSROOT.openFile("../../data/reference.root")
+						  .then(file => file.readObject(strUser0 + strUser1 + "_tdc_time_spectrum_corrected"))
+						  .then(obj => {
+							  obj.fLineColor = 2;
+							  JSROOT.redraw("d1", obj, "colz");
+						  });
+				
+				return;
+			}
+
+		</script>
+		<table align="center" cellspacing="50">
+			<tr>
+				<td>
+					<div id="d0"></div>
+				</td>
+				<td>
+					<div id="d1"></div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
